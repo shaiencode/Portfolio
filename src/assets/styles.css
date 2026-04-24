@@ -1,0 +1,580 @@
+/* --- 1. FONT IMPORTS --- */
+@font-face {
+  font-family: 'Pagkaki';
+  src: url('./fonts/pagkaki-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'AmsterdamTwo';
+  src: url('./fonts/AmsterdamTwoTtf-OVMEe.ttf') format('truetype');
+}
+
+/* --- 2. ROOT VARIABLES --- */
+:root {
+  --bg-color: #171717;
+  --text-white: #efede3;
+  --accent-yellow: #f9cd66;
+}
+
+/* --- 3. GLOBAL RESET --- */
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+/* --- 4. BODY & BACKGROUND --- */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-white);
+  font-family: 'Source Sans Pro', sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden; 
+  overflow-y: auto;
+  background-image: url('../assets/background/Portfolio BG.png');
+  background-size: cover;
+  background-position: center; 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.10;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* --- 5. NAVIGATION BAR --- */
+nav.navbar-container {
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  z-index: 1000;
+  background-color: #111111;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(239, 237, 227, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+nav.navbar-container ul {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav.navbar-container a {
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+  white-space: nowrap; 
+}
+
+nav.navbar-container a.active {
+  opacity: 1;
+  font-weight: 900; 
+  color: var(--accent-yellow);
+}
+
+nav.navbar-container a:hover {
+  opacity: 1;
+}
+
+/* --- 6. HOME HERO SECTION --- */
+.hero-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  position: relative;
+  width: fit-content;
+}
+
+.greeting {
+  align-self: flex-start;
+  text-align: left;
+  text-transform: lowercase;
+  font-size: clamp(0.7rem, 1.4vw, 1.2rem);
+  color: var(--accent-yellow);
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem; 
+  line-height: 1; 
+}
+
+.main-title {
+  font-family: 'Pagkaki', sans-serif;
+  font-size: clamp(3.5rem, 15vw, 12rem);
+  color: var(--text-white);
+  line-height: 0.8; 
+  letter-spacing: -4px;
+  margin-bottom: 1.5rem; 
+  position: relative;
+  width: 100%;
+}
+
+.sub-headings {
+  align-self: flex-end;
+  text-align: right;
+  color: var(--accent-yellow);
+  font-size: clamp(0.7rem, 1.4vw, 1.1rem); 
+  line-height: 1.2;
+}
+
+.bold { font-weight: 700; }
+.italic { font-style: italic; font-weight: 400; }
+
+/* --- 7. ABOUT PAGE STYLES --- */
+.about-wrapper {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  padding: 120px 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  width: 100%;
+  max-width: 1200px;
+  gap: 5rem;
+  margin-bottom: 4rem;
+}
+
+.about-left-title {
+  font-family: 'Pagkaki', sans-serif;
+  font-size: clamp(4rem, 10vw, 8rem);
+  line-height: 0.8;
+  text-transform: uppercase;
+  position: sticky;
+  top: 120px;
+}
+
+.about-short-bio {
+  font-size: clamp(1rem, 1.2vw, 1.2rem); 
+  line-height: 1.6;
+  border-left: 3px solid var(--accent-yellow);
+  padding-left: 1.5rem;
+}
+
+.full-screen-center-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+}
+
+.about-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  width: 100%;
+  max-width: 850px; 
+}
+
+.about-section-header {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent-yellow);
+  font-size: clamp(0.8rem, 1vw, 0.9rem); 
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(239, 237, 227, 0.1);
+  padding-bottom: 5px;
+}
+
+.about-text-block h3 {
+  font-size: clamp(1rem, 1.2vw, 1.2rem); 
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.about-text-block p {
+  font-size: clamp(0.9rem, 1.1vw, 1rem); 
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+/* --- 8. PROJECTS PAGE STYLES --- */
+.projects-wrapper {
+  min-height: 100vh;
+  padding: 120px 2rem;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 6rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-divider {
+  margin-top: 12rem; 
+  padding-top: 2rem;
+  border-top: 1px solid rgba(239, 237, 227, 0.05); 
+}
+
+.projects-main-title {
+  font-size: clamp(3rem, 8vw, 5rem);
+  color: var(--text-white);
+  line-height: 0.9; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.title-accent {
+  font-family: 'AmsterdamTwo', cursive;
+  color: var(--accent-yellow);
+  font-size: 1.1em;
+  margin-top: -5px; 
+  text-transform: lowercase;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column; 
+  gap: 3.5rem; 
+  width: 100%;
+}
+
+.project-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(239, 237, 227, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-yellow);
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.project-label {
+  background: #333;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.project-tag {
+  color: var(--text-white);
+  font-style: italic;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.project-media-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.gallery-item {
+  width: 23.5%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #000; 
+}
+
+.project-media-single {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.landscape-item {
+  width: 100%;
+  aspect-ratio: 16 / 9; 
+  object-fit: cover;
+  border-radius: 6px;
+  background: #111;
+  display: block;
+}
+
+iframe.landscape-item, iframe.gallery-item {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #111;
+}
+
+/* --- 9. CONTACT PAGE STYLES --- */
+.contact-wrapper {
+  min-height: 100vh;
+  padding: 140px 2rem 6rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.contact-main-header {
+  font-family: 'Pagkaki', sans-serif;
+  font-size: clamp(4rem, 12vw, 9rem);
+  text-transform: lowercase;
+  margin-bottom: 4rem;
+  line-height: 0.9;
+}
+
+.contact-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-yellow);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.contact-info-block {
+  margin-bottom: 2.5rem;
+}
+
+.contact-text {
+  font-size: 1rem;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+.contact-footer-info {
+  margin-top: 6rem;
+}
+
+.contact-email, .contact-phone {
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.contact-form input, 
+.contact-form select, 
+.contact-form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(239, 237, 227, 0.3);
+  color: var(--text-white);
+  padding: 0.8rem 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, 
+.contact-form select:focus, 
+.contact-form textarea:focus {
+  border-bottom-color: var(--accent-yellow);
+}
+
+.contact-submit-btn {
+  align-self: flex-start;
+  background: var(--text-white);
+  color: var(--bg-color);
+  border: none;
+  padding: 12px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+  background: var(--accent-yellow);
+}
+
+.contact-socials {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-link {
+  color: var(--accent-yellow);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.error-text {
+  color: #ff4d4d; /* Bright red for errors */
+  font-size: 0.7rem;
+  margin-top: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* --- 10. FOOTER SIGNATURE --- */
+.footer-sig {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+  width: 100%;
+}
+
+.signature {
+  font-family: 'AmsterdamTwo', cursive;
+  color: var(--accent-yellow);
+  font-size: clamp(1.8rem, 4vw, 2.8rem); 
+  margin: 0 8px;
+  line-height: 1;
+}
+
+/* --- 11. MEDIA QUERIES --- */
+@media (max-width: 850px) {
+  nav.navbar-container {
+    right: 50%;
+    transform: translateX(50%);
+    width: fit-content;
+    top: 1.5rem;
+    padding: 0.6rem 1.5rem;
+  }
+  
+  nav.navbar-container ul {
+    gap: 1.5rem;
+  }
+
+  .about-container { grid-template-columns: 1fr; }
+  .about-left-title { position: static; text-align: center; margin-bottom: 2rem; }
+  .about-grid-layout { 
+    grid-template-columns: 1fr; 
+    max-width: 100%; 
+    gap: 2.5rem;
+  }
+
+  .contact-content-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .contact-footer-info {
+    margin-top: 2rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-socials {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-divider {
+    margin-top: 6rem;
+  }
+  .project-media-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .gallery-item { width: 100%; }
+  .landscape-item { width: 100%; }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title-accent {
+    margin-top: -10px;
+    font-size: 1.3rem;
+  }
+
+  .projects-header {
+    margin-bottom: 3.5rem;
+  }
+}
