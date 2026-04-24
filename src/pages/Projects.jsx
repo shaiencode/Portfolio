@@ -46,10 +46,10 @@ function Projects() {
               <span className="project-tag">#Graphic_Posts</span>
             </div>
             <div className="project-media-gallery">
-              {renderMedia("/my-portfolio/projects/B2L 1.png", "B2L 1")}
-              {renderMedia("/my-portfolio/projects/B2L 2.png", "B2L 2")}
-              {renderMedia("/my-portfolio/projects/B2L 3.png", "B2L 3")}
-              {renderMedia("/my-portfolio/projects/B2L 4.png", "B2L 4")}
+              {renderMedia("/Portfolio/projects/B2L 1.png", "B2L 1")}
+              {renderMedia("/Portfolio/projects/B2L 2.png", "B2L 2")}
+              {renderMedia("/Portfolio/projects/B2L 3.png", "B2L 3")}
+              {renderMedia("/Portfolio/projects/B2L 4.png", "B2L 4")}
             </div>
           </div>
 
@@ -59,10 +59,10 @@ function Projects() {
               <span className="project-tag">#Trend_Videos #Study_Vlogs</span>
             </div>
             <div className="project-media-gallery">
-              {renderMedia("/my-portfolio/projects/APPILY 1.mp4", "APPILY 1")}
-              {renderMedia("/my-portfolio/projects/APPILY 2.mov", "APPILY 2")}
-              {renderMedia("/my-portfolio/projects/APPILY 3.mp4", "APPILY 3")}
-              {renderMedia("/my-portfolio/projects/APPILY 4.mp4", "APPILY 4")}
+              {renderMedia("/Portfolio/projects/APPILY 1.mp4", "APPILY 1")}
+              {renderMedia("/Portfolio/projects/APPILY 2.mov", "APPILY 2")}
+              {renderMedia("/Portfolio/projects/APPILY 3.mp4", "APPILY 3")}
+              {renderMedia("/Portfolio/projects/APPILY 4.mp4", "APPILY 4")}
             </div>
           </div>
 
@@ -72,10 +72,10 @@ function Projects() {
               <span className="project-tag">#Graphic_Posts #Testimonial_Videos</span>
             </div>
             <div className="project-media-gallery">
-              {renderMedia("/my-portfolio/projects/HUG 1.mp4", "HUG 1")}
-              {renderMedia("/my-portfolio/projects/HUG 2.mp4", "HUG 2")}
-              {renderMedia("/my-portfolio/projects/HUG 3.png", "HUG 3")}
-              {renderMedia("/my-portfolio/projects/HUG 4.png", "HUG 4")}
+              {renderMedia("/Portfolio/projects/HUG 1.mp4", "HUG 1")}
+              {renderMedia("/Portfolio/projects/HUG 2.mp4", "HUG 2")}
+              {renderMedia("/Portfolio/projects/HUG 3.png", "HUG 3")}
+              {renderMedia("/Portfolio/projects/HUG 4.png", "HUG 4")}
             </div>
           </div>
 
@@ -85,10 +85,10 @@ function Projects() {
               <span className="project-tag">#Graphic_Posts</span>
             </div>
             <div className="project-media-gallery">
-              {renderMedia("/my-portfolio/projects/PHI 1.png", "PHI 1")}
-              {renderMedia("/my-portfolio/projects/PHI 2.png", "PHI 2")}
-              {renderMedia("/my-portfolio/projects/PHI 3.png", "PHI 3")}
-              {renderMedia("/my-portfolio/projects/PHI 4.png", "PHI 4")}
+              {renderMedia("/Portfolio/projects/PHI 1.png", "PHI 1")}
+              {renderMedia("/Portfolio/projects/PHI 2.png", "PHI 2")}
+              {renderMedia("/Portfolio/projects/PHI 3.png", "PHI 3")}
+              {renderMedia("/Portfolio/projects/PHI 4.png", "PHI 4")}
             </div>
           </div>
         </div>
